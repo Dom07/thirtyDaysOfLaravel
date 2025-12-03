@@ -27,13 +27,19 @@
   </nav>
 </header>
 <section>
-  <div class="container mx-auto p-4 ">
-    <h1 class="text-4xl font-bold text-white mb-3">{{ $heading }}</h1>
-    <!-- <hr class="border-b border-gray-400"> -->
-    <div class="mt-5">
-      {{ $slot }}
+  <header class="bg-white shadow">
+    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:flex sm:justify-between">
+      <h1 class="text-3xl font-bold tracking-tight text-grey-900">{{ $heading }}</h1>
+      <x-button href="/jobs/create">
+        Create Job
+      </x-button>
     </div>
-  </div>
+    </header>
+    <main>
+      <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+        {{ $slot }}
+      </div>
+    </main>
 </section>
 </body>
 </html>
