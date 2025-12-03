@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  @vite('resources/css/app.css')
   </head>
 </head>
-<body>
-<header class="bg-gray-900">
+<body class="bg-gray-900">
+<header class="bg-gray-900 border-b border-gray-400">
   <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
     <div class="flex lg:flex-1">
       <a href="#" class="-m-1.5 p-1.5">
@@ -27,9 +27,9 @@
   </nav>
 </header>
 <section>
-  <div class="container mx-auto p-4 mt-5">
-    <h1 class="text-4xl font-bold text-blue-600 mb-3">{{ $heading }}</h1>
-    <hr>
+  <div class="container mx-auto p-4 ">
+    <h1 class="text-4xl font-bold text-white mb-3">{{ $heading }}</h1>
+    <!-- <hr class="border-b border-gray-400"> -->
     <div class="mt-5">
       {{ $slot }}
     </div>
