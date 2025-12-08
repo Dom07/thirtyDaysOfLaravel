@@ -21,8 +21,9 @@
       <x-nav-link href="/jobs" :active="request()->is('jobs')">Jobs</x-nav-link>
       <x-nav-link href="/contact" :active="request()->is('contact')">Contact Us</x-nav-link>
     </el-popover-group>
-    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-      <x-nav-link class="text-sm/6 font-semibold text-white cursor-pointer" type="button">Log in <span aria-hidden="true">&rarr;</span></x-nav-link>
+    <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-x-3">
+      <x-nav-link href="/login" :active="request()->is('login')">Log in</x-nav-link>
+      <x-nav-link href="/register" :active="request()->is('register')">Register</x-nav-link>
     </div>
   </nav>
 </header>

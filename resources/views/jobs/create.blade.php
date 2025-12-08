@@ -19,34 +19,22 @@
 
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
-            <label for="title" class="block text-sm/6 font-medium text-white">Title</label>
-            <div class="mt-2">
-              <input placeholder="Software Engineer" id="title" type="text" name="title" autocomplete="given-name" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" required />
-            </div>
-
-            @error('title')
-              <p class="text-red-500 text-sm mt-2">{{ $error }}</p>
-            @enderror
-
+            <x-form-label for="title">Title</x-form-label>
+            <x-form-input id="title" name="title" placeholder="Software Engineer" required></x-form-input>
+            <x-form-error name="title" />
           </div>
 
           <div class="sm:col-span-3">
-            <label for="salary" class="block text-sm/6 font-medium text-white">Salary</label>
-            <div class="mt-2">
-              <input placeholder="$100,000" id="salary" type="text" name="salary" autocomplete="family-name" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" required />
-            </div>
-
-            @error('salary')
-              <p class="text-red-500 text-sm mt-2">{{ $error }}</p>
-            @enderror
-
+            <x-form-label for="salary">Salary</x-form-label>
+            <x-form-input id="salary" name="salary" placeholder="$50,000" required></x-form-input>
+            <x-form-error name="salary" />
           </div>
         </div>
       </div>
     </div>
     <div class="mt-6 flex items-center justify-end gap-x-6">
-      <button type="button" class="text-sm/6 font-semibold text-white">Cancel</button>
-      <button type="submit" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Save</button>
+      <a type="button" class="text-sm/6 font-semibold text-white cursor-pointer" href="/jobs">Cancel</a>
+      <x-form-button>Save</x-form-button>
     </div>
   </form>
 </x-layout>
