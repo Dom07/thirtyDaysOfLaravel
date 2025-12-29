@@ -4,6 +4,9 @@ namespace App\Providers;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Gate;
+use App\Models\User;
+use App\Models\Job;
 
 class AppServiceProvider extends ServiceProvider
 {
