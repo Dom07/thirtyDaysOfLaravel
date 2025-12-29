@@ -20,7 +20,7 @@
         <div class="mt-5 grid grid-cols-1 gap-x-6 gap-y-3">
             <div class="max-w-md">
                 <x-form-label for="email">Email</x-form-label>
-                <x-form-input id="email" name="email" placeholder="johnDoe@gmail.com" required type="email"></x-form-input>
+                <x-form-input id="email" name="email" placeholder="johnDoe@gmail.com" required type="email" :value="old('email')"></x-form-input>
                 <x-form-error name="email" />
             </div>
         
