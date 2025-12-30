@@ -4,9 +4,15 @@ use App\Http\Controllers\JobController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\SessionController;
+use App\Jobs\TranslateJob;
 
 Route::view('/', 'welcome');
 Route::view("/contact", 'contact');
+
+Route::get("/test", function(){
+    TranslateJob::dispatch();
+    return "Done";
+});
 
 Route::get('/jobs', [JobController::class, 'index']);
 Route::get('/jobs/create', [JobController::class, 'create']);
